@@ -15,7 +15,6 @@ import java.util.Random;
 public class DemoAdapter extends PullRefreshLoadRecyclerView.LoadRefreshAdapter<DemoViewHolder>{
     private ArrayList<String> data = new ArrayList<>();
     Random r = new Random();
-    boolean failFlag = r.nextBoolean();
 
     public void initData(){
         data.clear();
@@ -62,7 +61,7 @@ public class DemoAdapter extends PullRefreshLoadRecyclerView.LoadRefreshAdapter<
         loadMoreView.postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(failFlag=!failFlag){
+                if(r.nextBoolean()){
                     loadMoreData();
                     loadMoreView.setState(LoadMoreView.STATE_NORMAL);
                 }else {
