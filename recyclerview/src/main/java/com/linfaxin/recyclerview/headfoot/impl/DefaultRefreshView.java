@@ -6,10 +6,12 @@ import android.view.Gravity;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.linfaxin.recyclerview.R;
 import com.linfaxin.recyclerview.headfoot.RefreshView;
 
 /**
  * Created by linfaxin on 15/8/31.
+ * Default impl of RefreshView
  */
 public class DefaultRefreshView extends RefreshView {
 
@@ -46,7 +48,7 @@ public class DefaultRefreshView extends RefreshView {
         addView(progressBar);
         addView(textView);
 
-        textView.setText("下拉刷新");
+        textView.setText(R.string.refresh_state_normal);
         progressBar.setVisibility(GONE);
     }
 
@@ -54,15 +56,15 @@ public class DefaultRefreshView extends RefreshView {
     protected void onStateChange(int newState, int oldState) {
         switch (newState) {
             case STATE_NORMAL:
-                textView.setText("下拉加载更多");
+                textView.setText(R.string.refresh_state_normal);
                 progressBar.setVisibility(GONE);
                 break;
             case STATE_READY:
-                textView.setText("松开立即刷新");
+                textView.setText(R.string.refresh_state_ready);
                 progressBar.setVisibility(GONE);
                 break;
             case STATE_LOADING:
-                textView.setText("加载中...");
+                textView.setText(R.string.refresh_state_loading);
                 progressBar.setVisibility(VISIBLE);
                 break;
         }

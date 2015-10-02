@@ -7,6 +7,6 @@
     <string name="loadmore_state_loading">Loading</string>
     <string name="loadmore_state_ready">Pull to load more</string>
     <string name="loadmore_state_no_more">Load Finish</string>
-    <string name="loadmore_state_fail">Load Fail</string>
+    <string name="loadmore_state_fail">Click to reload</string>
     <string name="loadmore_state_empty_reload">No data, click to reload</string>
 </resources>

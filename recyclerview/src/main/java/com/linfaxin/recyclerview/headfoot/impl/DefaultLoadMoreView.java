@@ -6,10 +6,12 @@ import android.view.Gravity;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.linfaxin.recyclerview.R;
 import com.linfaxin.recyclerview.headfoot.LoadMoreView;
 
 /**
  * Created by linfaxin on 15/8/31.
+ * Default impl of LoadMoreView
  */
 public class DefaultLoadMoreView extends LoadMoreView {
     private TextView textView;
@@ -45,7 +47,7 @@ public class DefaultLoadMoreView extends LoadMoreView {
         progressBar = new ProgressBar(getContext());
         addView(progressBar);
         addView(textView);
-        textView.setText("查看更多");
+        textView.setText(R.string.loadmore_state_normal);
         textView.setGravity(Gravity.CENTER);
         progressBar.setVisibility(GONE);
     }
@@ -54,27 +56,27 @@ public class DefaultLoadMoreView extends LoadMoreView {
     protected void onStateChange(int state, int oldState) {
         switch (state) {
             case STATE_NORMAL:
-                textView.setText("查看更多");
+                textView.setText(R.string.loadmore_state_normal);
                 progressBar.setVisibility(GONE);
                 break;
             case STATE_LOADING:
-                textView.setText("加载中...");
+                textView.setText(R.string.loadmore_state_loading);
                 progressBar.setVisibility(VISIBLE);
                 break;
             case STATE_READY:
-                textView.setText("松开加载更多");
+                textView.setText(R.string.loadmore_state_ready);
                 progressBar.setVisibility(GONE);
                 break;
             case STATE_NO_MORE:
-                textView.setText("加载完毕");
+                textView.setText(R.string.loadmore_state_no_more);
                 progressBar.setVisibility(GONE);
                 break;
             case STATE_LOAD_FAIL:
-                textView.setText("重新加载");
+                textView.setText(R.string.loadmore_state_fail);
                 progressBar.setVisibility(GONE);
                 break;
             case STATE_EMPTY_RELOAD:
-                textView.setText("无数据,点击重试");
+                textView.setText(R.string.loadmore_state_ready);
                 progressBar.setVisibility(GONE);
                 break;
         }
