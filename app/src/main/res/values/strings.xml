@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PullRefreshLoadRecyclerView</string>
+    <string name="info_over_scroll">Drag or Fling to over scroll with bounce.</string>
+
+</resources>

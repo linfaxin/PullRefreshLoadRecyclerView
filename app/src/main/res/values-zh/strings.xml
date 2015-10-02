@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PullRefreshLoadRecyclerView</string>
+    <string name="info_over_scroll">拖动(Drag)或者滑动(Fling)越界有平滑的回弹</string>
+</resources>

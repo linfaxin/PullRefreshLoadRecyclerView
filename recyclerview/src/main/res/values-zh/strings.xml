@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="refresh_state_normal">下拉刷新</string>
+    <string name="refresh_state_ready">松开立即刷新</string>
+    <string name="refresh_state_loading">加载中...</string>
+    <string name="loadmore_state_loading">加载中...</string>
+    <string name="loadmore_state_no_more">加载完毕</string>
+    <string name="loadmore_state_normal">加载更多</string>
+    <string name="loadmore_state_ready">松开加载更多</string>
+    <string name="loadmore_state_fail">重新加载</string>
+    <string name="loadmore_state_empty_reload">无数据,点击重试</string>
+</resources>
