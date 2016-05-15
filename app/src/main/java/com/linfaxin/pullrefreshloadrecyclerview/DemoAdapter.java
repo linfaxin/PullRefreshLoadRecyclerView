@@ -53,7 +53,7 @@ public class DemoAdapter extends PullRefreshLoadRecyclerView.LoadRefreshAdapter<
                 initData();
                 refreshView.setState(RefreshView.STATE_NORMAL);
             }
-        }, 1000);
+        }, 3000);
     }
 
     @Override
@@ -68,6 +68,6 @@ public class DemoAdapter extends PullRefreshLoadRecyclerView.LoadRefreshAdapter<
                     loadMoreView.setState(LoadMoreView.STATE_LOAD_FAIL);
                 }
             }
-        }, 1000);
+        }, 3000);
     }
 }
